@@ -13,7 +13,7 @@ body {
 }
 
 img {
-    height: 100px;
+    height: 90px;
     width: auto;
 }
 
@@ -22,14 +22,14 @@ img:hover {
 }
 
 img:active {
-    height: 90px;
+    height: 80px;
     width: auto;
 }
 
 #btns-container {
     display: flex;
     justify-content: center;
-    gap: 200px;
+    gap: 225px;
     align-items: center;
 }
 
