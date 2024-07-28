@@ -55,8 +55,8 @@ buttons.addEventListener('click', (event) => {
     }
 
     if (humanScore >= 5) {
-        results.textContent = "WINNER"
+        results.textContent = "winner"
     } else if (computerScore >= 5) {
-        results.textContent = "you lose :("
+        results.textContent = "loser"
     }
 });
