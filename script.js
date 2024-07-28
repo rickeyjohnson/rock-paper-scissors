@@ -1,6 +1,7 @@
 const buttons = document.querySelector("#btns-container")
 const results = document.querySelector("#results")
-const humanScore
+const humanScoreDiv = document.querySelector(".human")
+const computerScoreDiv = document.querySelector(".computer")
 
 let humanScore = 0
 let computerScore = 0
@@ -24,13 +25,15 @@ function playRound(humanChoice, computerChoice) {
     if ((humanChoice == 'rock' && computerChoice == 'scissors')
     || (humanChoice == 'paper' && computerChoice == 'rock')
     || (humanChoice == 'scissors' && computerChoice == 'paper')) {
-        results.textContent = "You win! " + humanChoice + " beats " + computerChoice
+        // results.textContent = "You win! " + humanChoice + " beats " + computerChoice
         humanScore++
+        humanScoreDiv.textContent = humanScore
     } else if (humanChoice == computerChoice) {
-        results.textContent = "Tie!"
+        // results.textContent = "Tie!"
     } else {
-        results.textContent = "You lose! " + computerChoice + " beats " + humanChoice
+        // results.textContent = "You lose! " + computerChoice + " beats " + humanChoice
         computerScore++
+        computerScoreDiv.textContent = computerScore
     }
 }
 
@@ -52,7 +55,7 @@ buttons.addEventListener('click', (event) => {
     }
 
     if (humanScore >= 5) {
-        results.textContent = "YOU WIN!"
+        results.textContent = "WINNER"
     } else if (computerScore >= 5) {
         results.textContent = "you lose :("
     }

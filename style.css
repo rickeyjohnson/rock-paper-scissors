@@ -16,6 +16,15 @@ img {
     width: auto;
 }
 
+img:hover {
+    cursor: pointer;
+}
+
+img:active {
+    height: 90px;
+    width: auto;
+}
+
 #btns-container {
     display: flex;
     flex: 1;
@@ -29,6 +38,11 @@ img {
     padding: 16px;
 }
 
+#results {
+    color: white;
+}
+
 .human {
     flex: 1;
 }
+
