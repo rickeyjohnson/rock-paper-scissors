@@ -1,5 +1,5 @@
-let humanScore = 0
-let computerScore = 0
+const buttons = document.querySelector("#btns-container")
+const results = document.querySelector("#results")
 
 function getComputerChoice() {
     let randomNum = parseInt(Math.random() * 3)
@@ -20,15 +20,13 @@ function playRound(humanChoice, computerChoice) {
     if ((humanChoice == 'rock' && computerChoice == 'scissors')
     || (humanChoice == 'paper' && computerChoice == 'rock')
     || (humanChoice == 'scissors' && computerChoice == 'paper')) {
-        console.log("You win! " + humanChoice + " beats " + computerChoice)
+        results.textContent = "You win! " + humanChoice + " beats " + computerChoice
     } else if (humanChoice == computerChoice) {
-        console.log("Tie!")
+        results.textContent = "Tie!"
     } else {
-        console.log("You lose! " + computerChoice + " beats " + humanChoice)
+        results.textContent = "You lose! " + computerChoice + " beats " + humanChoice
     }
 }
-
-const buttons = document.querySelector("#btns-container")
 
 buttons.addEventListener('click', (event) => {
     let target = event.target
