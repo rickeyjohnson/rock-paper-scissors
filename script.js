@@ -32,12 +32,20 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame() {
-    playRound(getHumanChoice(), getComputerChoice())
-    playRound(getHumanChoice(), getComputerChoice())
-    playRound(getHumanChoice(), getComputerChoice())
-    playRound(getHumanChoice(), getComputerChoice())
-    playRound(getHumanChoice(), getComputerChoice())
-}
+const buttons = document.querySelector(".btns-container")
 
-playGame()
+buttons.addEventListener('click', (event) => {
+    let target = event.target
+
+    switch(target.id) {
+        case 'rock':
+            console.log('rock')
+            break
+        case 'paper':
+            console.log('paper')
+            break
+        case 'scissors':
+            console.log('scissors')
+            break
+    }
+});
