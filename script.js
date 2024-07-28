@@ -1,5 +1,6 @@
 const buttons = document.querySelector("#btns-container")
 const results = document.querySelector("#results")
+const humanScore
 
 let humanScore = 0
 let computerScore = 0
