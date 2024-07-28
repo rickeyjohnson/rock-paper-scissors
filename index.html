@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors SHOE!</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>rock...paper...scissors?</title>
 </head>
 <body>
-    <h1>Rock, Paper, Scissors</h1>
-    <div id="btns-container">
-        <button id="rock">rock</button>
-        <button id="paper">paper</button>
-        <button id="scissors">scissors</button>
+    <div id="content">
+        <div id="btns-container">
+            <img id="rock" src="./images/rock.png">
+            <img id="paper" src="./images/paper.jpg">
+            <img id="scissors" src="./images/scissors.png">
+        </div>
+        <div id="results"></div>
+        <div id="footer">
+            <div class="human score">0</div>
+            <div class="computer score">0</div>
+        </div>
     </div>
-    <div id="results"></div>
+
     <script src="script.js"></script>
 </body>
 </html>

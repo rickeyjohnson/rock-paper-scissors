@@ -1,0 +1,22 @@
+html {
+    box-sizing: border-box;
+}
+
+img {
+    height: 100px;
+    width: auto;
+}
+
+#btns-container {
+    display: flex;
+    flex: 1;
+}
+
+#footer {
+    display: flex;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
