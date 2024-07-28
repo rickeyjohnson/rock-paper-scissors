@@ -32,7 +32,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const buttons = document.querySelector(".btns-container")
+const buttons = document.querySelector("#btns-container")
 
 buttons.addEventListener('click', (event) => {
     let target = event.target
@@ -47,5 +47,7 @@ buttons.addEventListener('click', (event) => {
         case 'scissors':
             console.log('scissors')
             break
+        default:
+            console.log('something broken')
     }
 });
