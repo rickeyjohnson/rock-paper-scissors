@@ -1,6 +1,9 @@
 const buttons = document.querySelector("#btns-container")
 const results = document.querySelector("#results")
 
+let humanScore = 0
+let computerScore = 0
+
 function getComputerChoice() {
     let randomNum = parseInt(Math.random() * 3)
     let computerChoice
@@ -21,10 +24,12 @@ function playRound(humanChoice, computerChoice) {
     || (humanChoice == 'paper' && computerChoice == 'rock')
     || (humanChoice == 'scissors' && computerChoice == 'paper')) {
         results.textContent = "You win! " + humanChoice + " beats " + computerChoice
+        humanScore++
     } else if (humanChoice == computerChoice) {
         results.textContent = "Tie!"
     } else {
         results.textContent = "You lose! " + computerChoice + " beats " + humanChoice
+        computerScore++
     }
 }
 
@@ -43,5 +48,11 @@ buttons.addEventListener('click', (event) => {
             break
         default:
             console.log('something broken')
+    }
+
+    if (humanScore >= 5) {
+        results.textContent = "YOU WIN!"
+    } else if (computerScore >= 5) {
+        results.textContent = "you lose :("
     }
 });
