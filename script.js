@@ -16,10 +16,6 @@ function getComputerChoice() {
     return computerChoice
 }
 
-function getHumanChoice() {
-    return prompt('Enter rock, paper, or scissors: ').toLowerCase()
-}
-
 function playRound(humanChoice, computerChoice) {
     if ((humanChoice == 'rock' && computerChoice == 'scissors')
     || (humanChoice == 'paper' && computerChoice == 'rock')
@@ -39,13 +35,13 @@ buttons.addEventListener('click', (event) => {
 
     switch(target.id) {
         case 'rock':
-            console.log('rock')
+            playRound('rock', getComputerChoice())
             break
         case 'paper':
-            console.log('paper')
+            playRound('paper', getComputerChoice())
             break
         case 'scissors':
-            console.log('scissors')
+            playRound('scissors', getComputerChoice())
             break
         default:
             console.log('something broken')
