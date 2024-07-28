@@ -25,13 +25,13 @@ function playRound(humanChoice, computerChoice) {
     if ((humanChoice == 'rock' && computerChoice == 'scissors')
     || (humanChoice == 'paper' && computerChoice == 'rock')
     || (humanChoice == 'scissors' && computerChoice == 'paper')) {
-        // results.textContent = "You win! " + humanChoice + " beats " + computerChoice
+        console.log("you win that round")
         humanScore++
         humanScoreDiv.textContent = humanScore
     } else if (humanChoice == computerChoice) {
-        // results.textContent = "Tie!"
+        console.log("tie that round")
     } else {
-        // results.textContent = "You lose! " + computerChoice + " beats " + humanChoice
+        console.log("you lose that round")
         computerScore++
         computerScoreDiv.textContent = computerScore
     }
